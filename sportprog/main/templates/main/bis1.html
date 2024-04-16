@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+{% extends 'main/layout.html'   %}
+{%  load static  %}
+
+
+{%  block  content %}
+
+
+<body class="main__body">
+    <section class="main__sec">
+
+
+        <div class="features" style="{% static 'main/img/зал2.png'  %}" >
+            <div class="main__h1">
+                <h1 class="ex__sh">Лучшие упражнения для развития бицепса</h1>
+            </div>
+            <h2 class="main__h2">Подъем гантелей на бицепс (молоты)</h2>
+            <img src="{% static 'main/img/bis1.png'  %}" alt="Бицепс">
+            <div class="main__h5">
+                <h5>Техника</h5>
+            </div>
+            <p>  1)Возьмите гантели нужного веса и встаньте прямо;</p>
+            <p>    2)Держите снаряды по бокам корпуса нейтральным хватом: ладони повернуты к телу, оси гантелей параллельны друг другу;</p>
+            <p>   3)Согните одну руку в локте, поднимая гантель. Работайте с максимальной амплитудой, но в верхней точке сохраняйте небольшое расстояние между запястьем и плечом, чтобы бицепсы не расслаблялись;</p>
+            <p>4)Вернитесь в начальное положение, но не распрямляйте руку полностью, чтобы минимизировать риск травмы локтевого сустава;</p>
+            <p>   5)Повторите движение другой рукой. Выполняйте упражнение на бицепс поочередно каждой рукой, двигаясь в энергичном темпе.</p>
+
+            <h2>Подъем гантелей на бицепс с супинацией</h2>
+            <img src="{% static 'main/img/bis2.png'  %}" alt="Бицепс">
+            <div class="main__h52">
+                <h5>Техника</h5>
+            </div>
+            <div class="main__p22">
+                <p>  1)Возьмите гантели и встаньте перед зеркалом с прямой спиной;</p>
+                <p>    2)Держите снаряды по бокам корпуса, ладони повернуты в сторону бедер, оси гантелей параллельны друг другу;</p>
+                <p>   3)Синхронно согните руки в локтях, а в середине траектории разверните ладони наружу и продолжайте движение вверх</p>
+                <p>4)В верхней точке запястья должны оказаться напротив плеч, но не слишком близко.</p>
+            </div>
+
+            <div class="page1">
+                <div class="main__h52">
+                    <h5 class="imp">Важно</h5>
+                </div>
+                <p>    Не сгибайте локти полностью, иначе бицепсы будут расслабляться в верхней точке.</p>
+
+            </div>
+
+
+            <div class="butasas" >
+           <a href="{% url 'home' %}" class="btn" role="button" data-bs-toggle="button"><i class="fa-solid fa-arrow-up"></i>ДРУГИЕ УПРАЖНЕНИЯ</a>
+           </div>
+           <div class="btn-up btn-up_hide"></div>
+<script>
+                const btnUp = {
+  el: document.querySelector('.btn-up'),
+  show() {
+    // удалим у кнопки класс btn-up_hide
+    this.el.classList.remove('btn-up_hide');
+  },
+  hide() {
+    // добавим к кнопке класс btn-up_hide
+    this.el.classList.add('btn-up_hide');
+  },
+  addEventListener() {
+    // при прокрутке содержимого страницы
+    window.addEventListener('scroll', () => {
+      // определяем величину прокрутки
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+      scrollY > 400 ? this.show() : this.hide();
+    });
+    // при нажатии на кнопку .btn-up
+    document.querySelector('.btn-up').onclick = () => {
+      // переместим в начало страницы
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
+}
+
+btnUp.addEventListener();
+</script>
+    </section>
+</body>
+
+{% endblock %}

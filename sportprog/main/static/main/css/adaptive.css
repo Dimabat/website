@@ -1,0 +1,44 @@
+@media only screen and (min-width: 1200px){
+ .header{
+     width:100%;
+
+ }
+
+
+
+}
+
+@media only screen and (min-width: 2000px){
+ .header{
+     width:100%;
+
+ }
+
+
+ .main__sec__tr{
+    width:200%
+    padding-left:3000px;
+
+
+ }
+}
+
+
+@media only screen and (max-width: 685px){
+    .header{
+     width:100%;
+     }
+     .header__nav{
+
+     }
+}
+
+@media only screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .header__list {
+        display: none;
+    }
+}

@@ -1,0 +1,156 @@
+{% extends 'main/layout.html'   %}
+{%  load static  %}
+{%  block  tittle %}Упражнения в зале{% endblock %}
+
+
+
+{%  block  content %}
+
+<style>
+    body{
+        background: url('{% static 'main/img/gymmm.png'  %}');
+        background-attachment: fixed;
+        background-size: cover;
+
+
+
+    }
+
+</style>
+<body class="1b">
+
+    <div class="gym_exc">
+        <h1 class="ex">Лучшие упражнения в зале на различные группы мыщц</h1>
+    <section class="fsec">
+
+
+
+        <ul class="main__ul">
+            <a href="{% url 'sh1' %}" class="main__a">
+                <img class="animate1" src="{% static 'main/img/shoulders.png'  %}">
+                <p class="main__p">Упражнения на плечи</p>
+            </a>
+            <a href="{% url 'bis1' %}" class="main__a">
+                <img class="animate1" src="{% static 'main/img/biseps1.png'  %}">
+                <p class="main__p1">Упражнения на бицепс</p>
+            </a>
+            <a href="{% url 'tric' %}" class="main__a">
+                <img class="animate1" src="{% static 'main/img/triceps2.png'  %}">
+                <p class="main__p2">Упражнения на трицепс</p>
+            </a>
+
+
+        </ul>
+        </section>
+
+
+        <section class="fsec">
+        <ul class="main__ul">
+            <a href="{% url 'legs' %}" class="main__a">
+                <img class="animate1" src="{% static 'main/img/legs2.png'  %}">
+                <p class="main__p">Упражнения на ноги</p>
+            </a>
+            <a href="{% url 'pres' %}" class="main__a">
+                <img class="animate1" src="{% static 'main/img/pres.png'  %}">
+                <p class="main__p1">Упражнения на пресс</p>
+            </a>
+            <a href="{% url 'fore' %}" class="main__a">
+                <img class="animate1" src="{% static 'main/img/fore.png'  %}">
+                <p class="main__p2">Упражнения на предпляечья</p>
+            </a>
+
+
+        </ul>
+        </section>
+        <section>
+</body>
+            <style>
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slider-inner {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  width: 200px;
+  display: none;
+}
+
+.slide img {
+  width:260px;
+  height:150px;
+  transition: all 1s ease;
+  margin-right:25px;
+
+}
+
+.slide img {
+        text-decoration: none;
+        border: none;
+        padding: 1px 1px;
+        font-size: 16px;
+                           //background-color: green;
+        color: #fff;
+        border-radius: 0px;
+
+        cursor: pointer;
+        outline: none;
+        transition: 0.6s all;
+        border: 1px solid #cac9c9 ;
+    }
+.slide img:hover {
+
+
+
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(168, 172, 168, 0.6);;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+}
+
+.arrow.left {
+  left: 12px;
+  margin-top:-20px;
+  opacity:1;
+
+}
+
+.arrow.right {
+  right: 328px;
+  margin-top:-20px;
+  opacity:1;
+}
+
+.arrow.left:hover {
+  left: 12px;
+  margin-top:-20px;
+  opacity:0.5;
+
+}
+
+
+.arrow.right:hover {
+  right: 328px;
+  margin-top:-20px;
+  opacity:0.5;
+}
+
+</style>
+
+
+
+{% endblock %}
